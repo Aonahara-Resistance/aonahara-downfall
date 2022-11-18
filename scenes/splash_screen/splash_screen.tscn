@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwisygf7xptxh"]
+
+[ext_resource type="Script" path="res://scenes/splash_screen/splash_screen.gd" id="1_0hfj0"]
+
+[node name="SplashScreen" type="Node2D"]
+texture_filter = 2
+script = ExtResource("1_0hfj0")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp4mq1c0vpixt"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_4vdav"]
+
+[node name="Level" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_4vdav")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Ground" type="TileMap" parent="."]
+format = 2
+
+[node name="Spawn" type="Marker2D" parent="."]
