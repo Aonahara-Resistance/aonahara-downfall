@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3b2k7wbaqvoa"]
+
+[ext_resource type="Script" path="res://entities/character/character.gd" id="1_6ttam"]
+[ext_resource type="Script" path="res://common/state_machine.gd" id="2_obxlp"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s4oha"]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_4j6b3"]
+
+[node name="Character" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_6ttam")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_obxlp")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_s4oha")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_4j6b3")
