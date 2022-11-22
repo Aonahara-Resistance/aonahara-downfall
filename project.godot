@@ -15,6 +15,16 @@ _global_script_classes=[{
 "path": "res://entities/character/character.gd"
 }, {
 "base": "Node2D",
+"class": &"Dash",
+"language": &"GDScript",
+"path": "res://common/dash/dash.gd"
+}, {
+"base": "Sprite2D",
+"class": &"DashGhost",
+"language": &"GDScript",
+"path": "res://common/dash/dash_ghost.gd"
+}, {
+"base": "Node2D",
 "class": &"Level",
 "language": &"GDScript",
 "path": "res://scenes/levels/level.gd"
@@ -31,6 +41,8 @@ _global_script_classes=[{
 }]
 _global_script_class_icons={
 "Character": "",
+"Dash": "",
+"DashGhost": "",
 "Level": "",
 "SplashScreen": "",
 "StateMachine": ""
@@ -47,6 +59,10 @@ boot_splash/show_image=false
 boot_splash/use_filter=false
 boot_splash/bg_color=Color(1, 1, 1, 1)
 config/icon="res://assets/icon.png"
+
+[autoload]
+
+GameSignal="*res://singletons/game_signal.gd"
 
 [debug]
 

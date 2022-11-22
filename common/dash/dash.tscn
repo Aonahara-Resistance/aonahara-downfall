@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj0l85d3cjucs"]
+
+[ext_resource type="Script" path="res://common/dash/dash.gd" id="1_yebrv"]
+
+[node name="Dash" type="Node2D"]
+script = ExtResource("1_yebrv")
+
+[node name="DurationTimer" type="Timer" parent="."]
+
+[node name="GhostSpawnIntervalTimer" type="Timer" parent="."]
+
+[node name="CooldownTimer" type="Timer" parent="."]
+
+[node name="DustTrail" type="GPUParticles2D" parent="."]
+
+[node name="DustBurst" type="GPUParticles2D" parent="."]
+
+[connection signal="timeout" from="DurationTimer" to="." method="_on_duration_timer_timeout"]
+[connection signal="timeout" from="GhostSpawnIntervalTimer" to="." method="_on_ghost_spawn_interval_timer_timeout"]
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

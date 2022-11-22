@@ -3,6 +3,13 @@ class_name Character
 
 @export var acceleration: int = 150
 @export var friction: float = 0.7
+@export var stamina: int
+@export var max_stamina: int
+@export var dash_speed: int
+@export var dash_duration: float = 0.2
+@export var dash_cooldown: float = 2
+
+@onready var sprite: Sprite2D = $Sprite
 
 var state_machine: StateMachine
 
